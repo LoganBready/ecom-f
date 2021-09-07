@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { toast } from "react-toastify";
+import Header from "../components/Header";
 
 const Dashboard = ({ setAuth }) => {
   const [name, setName] = useState("");
@@ -30,6 +31,7 @@ const Dashboard = ({ setAuth }) => {
 
   return (
     <>
+      <Header />
       <h1>Dashboard</h1>
       <h2>Welcome, {name}!</h2>
       <button onClick={(e) => logout(e)}>Log Out</button>

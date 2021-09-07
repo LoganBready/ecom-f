@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
+import Header from "../components/Header";
 
 const Login = ({ setAuth }) => {
   const [inputs, setInputs] = useState({
@@ -38,25 +40,34 @@ const Login = ({ setAuth }) => {
   };
   return (
     <>
-      <h1>Login</h1>
-      <form onSubmit={onSubmitForm}>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => onChange(e)}
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => onChange(e)}
-        />
-        <button>Log In</button>
-      </form>
-      <Link to="/register">Register</Link>
+      <Header />
+      <h1 className="mt-5 text-center">Log In</h1>
+      <Form onSubmit={onSubmitForm}>
+        <Form.Group size="lg" controlId="email">
+          <Form.Label>Email</Form.Label>
+          <Form.Control
+            autoFocus
+            name="email"
+            type="email"
+            value={email}
+            onChange={(e) => onChange(e)}
+            className="form-control my-3"
+          />
+        </Form.Group>
+        <Form.Group size="lg" controlId="password">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            name="password"
+            value={password}
+            onChange={(e) => onChange(e)}
+            className="form-control my-3"
+          />
+        </Form.Group>
+        <Button block size="lg" type="submit" className="btn  btn-block">
+          Login
+        </Button>
+      </Form>
     </>
   );
 };
