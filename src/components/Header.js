@@ -4,7 +4,7 @@ import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
 
 export default function Header({ setAuth }) {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" sticky="top">
+    <Navbar collapseOnSelect expand="lg" bg="light" sticky="top" className="">
       <Container>
         <Navbar.Brand href="/">The Fishing Store</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import CategoriesGrid from "./components/CategoriesGrid";
 
 toast.configure();
 
@@ -78,6 +79,7 @@ function App() {
                 )
               }
             />
+            <Route path="/Category" component={CategoriesGrid} />
           </Switch>
         </div>
       </Router>

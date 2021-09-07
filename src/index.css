@@ -2,17 +2,3 @@
   padding: 0;
   margin: 0;
 }
-
-nav {
-  display: flex;
-  column-gap: 15px;
-}
-
-nav li {
-  float: left;
-  text-decoration: none;
-}
-
-nav li a {
-  text-decoration: none;
-}
