@@ -1,3 +1,5 @@
+//ADD MIN PASS LENGTH
+
 const router = require("express").Router();
 const pool = require("../db");
 const bcrypt = require("bcrypt");
@@ -17,6 +19,9 @@ router.post("/register", validInfo, async (req, res) => {
       return res.status(401).json("Email already registered.");
     }
 
+    // if (password.body.length < 5) {
+    //   return alert("Password must be at least 5 characters!");
+    // }
     const saltRound = 10;
     const salt = await bcrypt.genSalt(saltRound);
 

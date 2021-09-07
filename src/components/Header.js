@@ -61,7 +61,9 @@ export default function Header({ setAuth }) {
           </Nav>
           <Nav>
             <Nav.Link href="/">Cart</Nav.Link>
-            <Button variant="light">Sign In</Button>
+            <Button variant="light" href="/login">
+              Sign In
+            </Button>
           </Nav>
         </Navbar.Collapse>
       </Container>
