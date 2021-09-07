@@ -5,10 +5,11 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import Home from "./pages/Home";
 import Dashboard from "./components/Dashboard";
 import Login from "./components/Login";
 import Register from "./components/Register";
@@ -46,8 +47,8 @@ function App() {
       <Router>
         <div className="container">
           <Switch>
+            <Route exact path="/" component={Home} />
             <Route
-              exact
               path="/login"
               render={(props) =>
                 !isAuthenticated ? (
