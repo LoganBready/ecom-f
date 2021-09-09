@@ -45,7 +45,13 @@ const getCategory = async (req, res) => {
 };
 
 const getCart = async (req, res) => {
-  const cart = await pool.query("SELECT * FROM cart;");
+  const { user_id, user_name, user_email, cart_id } = req.body;
+  const { id } = req.params;
+  console.log(id);
+  const cart = await pool.query(
+    "SELECT u.user_id, u.user_name, u.user_email, c.cart_id, c.product_id, c.quantity FROM users u JOIN cart c on c.user_id = u.user_id WHERE u.user_id = $1",
+    [id]
+  );
   res.json(cart);
 };
 

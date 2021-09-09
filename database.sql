@@ -77,3 +77,12 @@ VALUES (6, 'Shark Shirt', 23.50, 'Lorem ipsum dolor sit amet, consectetuer adipi
 
 ALTER TABLE users
 DROP COLUMN cart_id;
+
+ALTER TABLE users
+ADD COLUMN cart_id SERIAL
+ADD CONSTRAINT cart_id REFRENCES cart(cart_id);
+
+SELECT u.user_id, u.user_name, u.user_email, c.cart_id, c.product_id, c.quantity
+from users u 
+join cart c on c.user_id = u.user_id
+where u.user_id = 24;

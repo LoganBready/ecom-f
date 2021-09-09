@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Card, Col, Row, CardGroup } from "react-bootstrap";
 import Header from "../components/Header";
-import luresthumb from "../images/thumbnail/lures-thumbnail.jpg";
-import reelsthumb from "../images/thumbnail/reels-thumbnail.jpg";
-import rodsthumb from "../images/thumbnail/rods-thumbnail.jpg";
+
 import tacklethumb from "../images/thumbnail/tackle-thumbnail.jpg";
 import bootsthumb from "../images/thumbnail/boots-thumbnail.jpg";
 import clothingthumb from "../images/thumbnail/clothing-thumbnail.jpg";
@@ -20,9 +18,10 @@ export default function CategoriesGrid() {
   return (
     <div>
       <Header />
+      <h1 className="text-center">Product Categories</h1>
       <CardGroup>
         <Card>
-          <Card.Img variant="top" src={luresthumb} />
+          <Card.Img variant="top" />
           <Card.Body>
             <Card.Title>Lures</Card.Title>
             <Card.Text>
@@ -32,7 +31,7 @@ export default function CategoriesGrid() {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src={rodsthumb} />
+          <Card.Img variant="top" />
           <Card.Body>
             <Card.Title>Fishing Rods</Card.Title>
             <Card.Text>
@@ -42,7 +41,7 @@ export default function CategoriesGrid() {
           </Card.Body>
         </Card>
         <Card>
-          <Card.Img variant="top" src={reelsthumb} />
+          <Card.Img variant="top" />
           <Card.Body>
             <Card.Title>Reels</Card.Title>
             <Card.Text>
