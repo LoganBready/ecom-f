@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { Card, Col, Row, CardGroup } from "react-bootstrap";
+import Header from "../components/Header";
 import luresthumb from "../images/thumbnail/lures-thumbnail.jpg";
 import reelsthumb from "../images/thumbnail/reels-thumbnail.jpg";
 import rodsthumb from "../images/thumbnail/rods-thumbnail.jpg";
@@ -8,8 +10,16 @@ import bootsthumb from "../images/thumbnail/boots-thumbnail.jpg";
 import clothingthumb from "../images/thumbnail/clothing-thumbnail.jpg";
 
 export default function CategoriesGrid() {
+  const [title, setTitle] = useState([]);
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/category").then((res) => {
+      console.log(res.data.rows);
+    });
+  });
+
   return (
     <div>
+      <Header />
       <CardGroup>
         <Card>
           <Card.Img variant="top" src={luresthumb} />

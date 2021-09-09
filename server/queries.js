@@ -41,7 +41,7 @@ const deleteProduct = async (req, res) => {
 
 const getCategory = async (req, res) => {
   const category = await pool.query("SELECT * FROM category;");
-  res.json(products);
+  res.json(category);
 };
 
 const getCart = async (req, res) => {

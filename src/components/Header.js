@@ -60,7 +60,9 @@ export default function Header({ setAuth }) {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="/">Cart</Nav.Link>
+            <Nav.Link>
+              <Link to="/cart">Cart</Link>
+            </Nav.Link>
             <Button variant="light" href="/login">
               Sign In
             </Button>

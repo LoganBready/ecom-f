@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CategoriesGrid from "./components/CategoriesGrid";
+import Cart from "./pages/Cart";
 
 toast.configure();
 
@@ -79,7 +80,17 @@ function App() {
                 )
               }
             />
-            <Route path="/Category" component={CategoriesGrid} />
+            <Route
+              path="/cart"
+              render={(props) =>
+                isAuthenticated ? (
+                  <Cart {...props} setAuth={setAuth} />
+                ) : (
+                  <Redirect to="/login" />
+                )
+              }
+            />
+            <Route path="/category" component={CategoriesGrid} />
           </Switch>
         </div>
       </Router>
