@@ -74,3 +74,6 @@ INSERT INTO product (category_id, product_name, product_price, product_descripti
 VALUES (6, 'Goture', 55.00, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
 INSERT INTO product (category_id, product_name, product_price, product_description)
 VALUES (6, 'Shark Shirt', 23.50, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
+
+ALTER TABLE users
+DROP COLUMN cart_id;
