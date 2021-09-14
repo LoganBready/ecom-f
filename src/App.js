@@ -14,6 +14,12 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import CategoriesGrid from "./components/CategoriesGrid";
+import LuresGrid from "./components/LuresGrid";
+import RodsGrid from "./components/RodsGrid";
+import ReelsGrid from "./components/ReelsGrid";
+import TackleGrid from "./components/TackleGrid";
+import BootsGrid from "./components/BootsGrid";
+import ClothingGrid from "./components/ClothingGrid";
 import Cart from "./pages/Cart";
 
 toast.configure();
@@ -91,6 +97,12 @@ function App() {
               }
             />
             <Route path="/category" component={CategoriesGrid} />
+            <Route path="/lures" component={LuresGrid} />
+            <Route path="/rods" component={RodsGrid} />
+            <Route path="/reels" component={ReelsGrid} />
+            <Route path="/tackle" component={TackleGrid} />
+            <Route path="/boots" component={BootsGrid} />
+            <Route path="/clothing" component={ClothingGrid} />
           </Switch>
         </div>
       </Router>
