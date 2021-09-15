@@ -13,6 +13,7 @@ import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import Products from "./pages/Products";
 import CategoriesGrid from "./components/CategoriesGrid";
 import LuresGrid from "./components/LuresGrid";
 import RodsGrid from "./components/RodsGrid";
@@ -103,6 +104,7 @@ function App() {
             <Route path="/tackle" component={TackleGrid} />
             <Route path="/boots" component={BootsGrid} />
             <Route path="/clothing" component={ClothingGrid} />
+            <Route path="/products/:id" component={Products} />
           </Switch>
         </div>
       </Router>

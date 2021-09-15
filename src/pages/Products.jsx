@@ -1,34 +1,32 @@
-// import React from "react";
-// import axios from "axios";
-// import { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import { Button } from "react-bootstrap";
+import GetBootImage from "../components/GetBootImage";
 
-// export default function Products() {
-//   const [products, setProducts] = useState([]);
-//   useEffect(() => {
-//     axios
-//       .get("http://localhost:5000/api/products")
-//       .then((res) => {
-//         setProducts(res.data.rows);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   }, []);
+export default function Products() {
+  const [item, setItem] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+  const { id } = useParams();
 
-//   console.log(products);
-//   const mappedProducts = products.map((key, index) => {
-//     return (
-//       <div>
-//         <ul>
-//           <li key={index}>{key.product_name}</li>
-//         </ul>
-//       </div>
-//     );
-//   });
+  useEffect(() => {
+    axios.get("http://localhost:5000/api/products").then((res) => {
+      //   console.log(res.data.rows[id].product_price);
+      setItem(res.data.rows[id].product_name);
+      setPrice(res.data.rows[id].product_price);
+      setDescription(res.data.rows[id].product_description);
+      console.log(item);
+    });
+  }, []);
 
-//   return (
-//     <div>
-//       <p>{mappedProducts}</p>
-//     </div>
-//   );
-// }
+  return (
+    <div>
+      {item}
+      {price}
+      {description}
+      <GetBootImage id={id} />
+      <Button>Add to Cart</Button>
+    </div>
+  );
+}
