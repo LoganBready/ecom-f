@@ -105,6 +105,7 @@ export default function Header({ setAuth }) {
             <Nav.Link>
               <Link to="/cart">Cart</Link>
             </Nav.Link>
+
             <Button variant="light" href="/login">
               Sign In
             </Button>
