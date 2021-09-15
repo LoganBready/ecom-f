@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, CardGroup } from "react-bootstrap";
 import Header from "./Header";
-
+import { Link } from "react-router-dom";
 import bassHoodie from "../images/clothing/clothing-1.jpg";
 import halfGloves from "../images/clothing/clothing-2.jpg";
 import longSleeveShirt from "../images/clothing/clothing-3.jpg";
@@ -66,7 +66,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={bassHoodie} />
           <Card.Body>
             <Card.Title>
-              {name}
+              <Link to="/products/30">{name}</Link>
               {"$" + price}
             </Card.Title>
             <Card.Text>{description}</Card.Text>
@@ -76,7 +76,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={halfGloves} />
           <Card.Body>
             <Card.Title>
-              {name2}
+              <Link to="/products/31">{name2}</Link>
               {"$" + price2}
             </Card.Title>
             <Card.Text>{description2}</Card.Text>
@@ -86,7 +86,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={longSleeveShirt} />
           <Card.Body>
             <Card.Title>
-              {name3}
+              <Link to="/products/32">{name3}</Link>
               {"$" + price3}
             </Card.Title>
             <Card.Text>{description3}</Card.Text>
@@ -98,7 +98,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={americaFishHat} />
           <Card.Body>
             <Card.Title>
-              {name4}
+              <Link to="/products/33"> {name4}</Link>
               {"$" + price4}
             </Card.Title>
             <Card.Text>{description4}</Card.Text>
@@ -108,7 +108,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={goture} />
           <Card.Body>
             <Card.Title>
-              {name5}
+              <Link to="/products/34">{name5}</Link>
               {"$" + price5}
             </Card.Title>
             <Card.Text>{description5}</Card.Text>
@@ -118,7 +118,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={sharkShirt} />
           <Card.Body>
             <Card.Title>
-              {name6}
+              <Link to="/products/35">{name6}</Link>
               {"$" + price6}
             </Card.Title>
             <Card.Text>{description6}</Card.Text>

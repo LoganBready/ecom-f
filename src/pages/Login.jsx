@@ -67,6 +67,7 @@ const Login = ({ setAuth }) => {
         <Button block size="lg" type="submit" className="btn  btn-block">
           Login
         </Button>
+        <Link to="/register">Register</Link>
       </Form>
     </>
   );

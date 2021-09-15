@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Card, CardGroup } from "react-bootstrap";
 import Header from "./Header";
-
+import { Link } from "react-router-dom";
 import backPack from "../images/tackle/tackle-1.jpg";
 import plasticBox from "../images/tackle/tackle-2.jpg";
 import chestPack from "../images/tackle/tackle-3.jpg";
@@ -33,7 +33,6 @@ export default function LuresGrid() {
     axios
       .get("http://localhost:5000/api/products")
       .then((res) => {
-        console.log(res.data.rows);
         setName(res.data.rows[18].product_name);
         setPrice(res.data.rows[18].product_price);
         setDescription(JSON.stringify(res.data.rows[18].product_description));
@@ -66,7 +65,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={backPack} />
           <Card.Body>
             <Card.Title>
-              {name}
+              <Link to="/products/18">{name}</Link>
               {"$" + price}
             </Card.Title>
             <Card.Text>{description}</Card.Text>
@@ -76,7 +75,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={plasticBox} />
           <Card.Body>
             <Card.Title>
-              {name2}
+              <Link to="/products/19">{name2}</Link>
               {"$" + price2}
             </Card.Title>
             <Card.Text>{description2}</Card.Text>
@@ -86,7 +85,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={chestPack} />
           <Card.Body>
             <Card.Title>
-              {name3}
+              <Link to="/products/20">{name3}</Link>
               {"$" + price3}
             </Card.Title>
             <Card.Text>{description3}</Card.Text>
@@ -98,7 +97,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={largeTackleBox} />
           <Card.Body>
             <Card.Title>
-              {name4}
+              <Link to="/products/21">{name4}</Link>
               {"$" + price4}
             </Card.Title>
             <Card.Text>{description4}</Card.Text>
@@ -108,7 +107,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={waterProofBox} />
           <Card.Body>
             <Card.Title>
-              {name5}
+              <Link to="/products/22">{name5}</Link>
               {"$" + price5}
             </Card.Title>
             <Card.Text>{description5}</Card.Text>
@@ -118,7 +117,7 @@ export default function LuresGrid() {
           <Card.Img variant="top" src={flyBox} />
           <Card.Body>
             <Card.Title>
-              {name6}
+              <Link to="/products/23">{name6}</Link>
               {"$" + price6}
             </Card.Title>
             <Card.Text>{description6}</Card.Text>
