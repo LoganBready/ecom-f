@@ -11,52 +11,94 @@ export default function Header({ setAuth }) {
         <Navbar.Collapse>
           <Nav>
             <NavDropdown title="Lures">
-              <NavDropdown.Item href="/">Blue Deep Diver</NavDropdown.Item>
-              <NavDropdown.Item href="/">Pink Lady</NavDropdown.Item>
-              <NavDropdown.Item href="/">Shad Chad</NavDropdown.Item>
-              <NavDropdown.Item href="/">Yellow Fish</NavDropdown.Item>
-              <NavDropdown.Item href="/">Minnow</NavDropdown.Item>
-              <NavDropdown.Item href="/">Green Pike</NavDropdown.Item>
+              <NavDropdown.Item href="/products/0">
+                Blue Deep Diver
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/1">Pink Lady</NavDropdown.Item>
+              <NavDropdown.Item href="/products/2">Shad Chad</NavDropdown.Item>
+              <NavDropdown.Item href="/products/3">
+                Yellow Fish
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/4">Minnow</NavDropdown.Item>
+              <NavDropdown.Item href="/products/5">Green Pike</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Rods">
-              <NavDropdown.Item href="/">Midnight Furry</NavDropdown.Item>
-              <NavDropdown.Item href="/">Ocean Tech</NavDropdown.Item>
-              <NavDropdown.Item href="/">Two Split</NavDropdown.Item>
-              <NavDropdown.Item href="/">Orange Roam</NavDropdown.Item>
-              <NavDropdown.Item href="/">Fly Rod</NavDropdown.Item>
-              <NavDropdown.Item href="/">Fishing Pole</NavDropdown.Item>
+              <NavDropdown.Item href="/products/6">
+                Midnight Furry
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/7">Ocean Tech</NavDropdown.Item>
+              <NavDropdown.Item href="/products/8">Two Split</NavDropdown.Item>
+              <NavDropdown.Item href="/products/9">
+                Orange Roam
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/10">Fly Rod</NavDropdown.Item>
+              <NavDropdown.Item href="/products/11">
+                Fishing Pole
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Reels">
-              <NavDropdown.Item href="/">Ocean Caster</NavDropdown.Item>
-              <NavDropdown.Item href="/">Bait Caster</NavDropdown.Item>
-              <NavDropdown.Item href="/">Goldy Locks</NavDropdown.Item>
-              <NavDropdown.Item href="/">Blue Moon</NavDropdown.Item>
-              <NavDropdown.Item href="/">Abyss</NavDropdown.Item>
-              <NavDropdown.Item href="/">Silver Bullet</NavDropdown.Item>
+              <NavDropdown.Item href="/products/12">
+                Ocean Caster
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/13">
+                Bait Caster
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/14">
+                Goldy Locks
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/15">Blue Moon</NavDropdown.Item>
+              <NavDropdown.Item href="/products/16">Abyss</NavDropdown.Item>
+              <NavDropdown.Item href="/products/17">
+                Silver Bullet
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Tackle">
-              <NavDropdown.Item href="/">Back Pack</NavDropdown.Item>
-              <NavDropdown.Item href="/">Plastic Box</NavDropdown.Item>
-              <NavDropdown.Item href="/">Chest Pack</NavDropdown.Item>
-              <NavDropdown.Item href="/">Large Tackle Box</NavDropdown.Item>
-              <NavDropdown.Item href="/">Water Proof Box</NavDropdown.Item>
-              <NavDropdown.Item href="/">Fly Box</NavDropdown.Item>
+              <NavDropdown.Item href="/products/18">Back Pack</NavDropdown.Item>
+              <NavDropdown.Item href="/products/19">
+                Plastic Box
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/20">
+                Chest Pack
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/21">
+                Large Tackle Box
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/22">
+                Water Proof Box
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/23">Fly Box</NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Boots">
-              <NavDropdown.Item href="/">Jungle Boots</NavDropdown.Item>
-              <NavDropdown.Item href="/">The Boot</NavDropdown.Item>
-              <NavDropdown.Item href="/">Sims Foot</NavDropdown.Item>
-              <NavDropdown.Item href="/">Reddington Grey</NavDropdown.Item>
-              <NavDropdown.Item href="/">Booties</NavDropdown.Item>
-              <NavDropdown.Item href="/">Wrapth Tech</NavDropdown.Item>
+              <NavDropdown.Item href="/products/24">
+                Jungle Boots
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/25">The Boot</NavDropdown.Item>
+              <NavDropdown.Item href="/products/26">Sims Foot</NavDropdown.Item>
+              <NavDropdown.Item href="/products/27">
+                Reddington Grey
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/28">Booties</NavDropdown.Item>
+              <NavDropdown.Item href="/products/29">
+                Wrapth Tech
+              </NavDropdown.Item>
             </NavDropdown>
             <NavDropdown title="Clothing">
-              <NavDropdown.Item href="/">Bass Hoodie</NavDropdown.Item>
-              <NavDropdown.Item href="/">Half Gloves</NavDropdown.Item>
-              <NavDropdown.Item href="/">Long Sleeve Shirt</NavDropdown.Item>
-              <NavDropdown.Item href="/">America Fish Hat</NavDropdown.Item>
-              <NavDropdown.Item href="/">Goture</NavDropdown.Item>
-              <NavDropdown.Item href="/">Shark Shirt</NavDropdown.Item>
+              <NavDropdown.Item href="/products/30">
+                Bass Hoodie
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/31">
+                Half Gloves
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/32">
+                Long Sleeve Shirt
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/33">
+                America Fish Hat
+              </NavDropdown.Item>
+              <NavDropdown.Item href="/products/34">Goture</NavDropdown.Item>
+              <NavDropdown.Item href="/products/35">
+                Shark Shirt
+              </NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Nav>
