@@ -11,14 +11,14 @@ export default function carousel() {
         <Carousel.Item interval={3500}>
           <img className="d-block w-100" src={carousel1} alt="First slide" />
           <Carousel.Caption>
-            <h3>Lures</h3>
+            <h3>Rods</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3500}>
           <img className="d-block w-100" src={carousel2} alt="Second slide" />
           <Carousel.Caption>
-            <h3>Rods</h3>
+            <h3>Lures</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
