@@ -8,6 +8,7 @@ export default function Products() {
   const [item, setItem] = useState("");
   const [price, setPrice] = useState("");
   const [description, setDescription] = useState("");
+  const [productId, setProductId] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
@@ -16,9 +17,20 @@ export default function Products() {
       setItem(res.data.rows[id].product_name);
       setPrice(res.data.rows[id].product_price);
       setDescription(res.data.rows[id].product_description);
-      console.log(item);
+      setProductId(res.data.rows[id].product_id);
     });
   }, []);
+  // function addProduct() {
+  //   const addParams = { user_id: "26", product_id: 0, quantity: 3 };
+  //   axios
+  //     .post("http://localhost:5000/api/cart/:id", addParams)
+  //     .then((res) => {
+  //       return console.log("Success!");
+  //     })
+  //     .catch((err) => {
+  //       console.log(err.message);
+  //     });
+  // }
 
   return (
     <div>

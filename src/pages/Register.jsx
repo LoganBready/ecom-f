@@ -1,9 +1,10 @@
 // import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import Header from "../components/Header";
 import { Form, Button } from "react-bootstrap";
+import axios from "axios";
 
 const Register = ({ setAuth }) => {
   const [inputs, setInputs] = useState({
