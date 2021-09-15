@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import { Button } from "react-bootstrap";
+import { Button, Card, CardGroup } from "react-bootstrap";
 import GetBootImage from "../components/GetBootImage";
 
 export default function Products() {
@@ -34,11 +34,19 @@ export default function Products() {
 
   return (
     <div>
-      {item}
-      {price}
-      {description}
-      <GetBootImage id={id} />
-      <Button>Add to Cart</Button>
+      <CardGroup>
+        <Card>
+          <GetBootImage id={id} />
+        </Card>
+        <Card>
+          <Card.Body>
+            <Card.Title className="text-center">{item}</Card.Title>
+            <Card.Text>{description}</Card.Text>
+            <Card.Text>{"$" + price}</Card.Text>
+            <Button>Add to Cart</Button>
+          </Card.Body>
+        </Card>
+      </CardGroup>
     </div>
   );
 }
