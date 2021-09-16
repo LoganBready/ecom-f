@@ -56,19 +56,42 @@ const getCart = async (req, res) => {
 };
 
 // const addCart = async (req, res) => {
-//   const { user_id, product_id, quantity } = req.body;
+//   const { product_id } = req.body;
+//   const { user_id } = parseInt(req.params.id);
+//   const getCartId = await pool.query(
+//     "SELECT cart_id FROM cart WHERE user_id = $1",
+//     [user_id]
+//   );
 //   const addP = await pool.query(
-//     "INSERT INTO cart (user_id, product_id, quantity) VALUES ($1, $2, $3)",
-//     [user_id, product_id, quantity]
+//     "INSERT INTO cart (product_id) VALUES ($1) WHERE cart_id = $2",
+//     [product_id, getCartId.rows[0].cart_id]
 //   );
 //   res.status(200).send(`Product added into cart.`);
 // };
 
+// const updateCart = async (req, res) => {
+//   const user_id = parseInt(req.params.id);
+//   console.log(typeof user_id);
+//   let { product_id } = req.body;
+//   parseInt(product_id);
+
+//   const cartId = await pool.query(
+//     "SELECT cart_id FROM cart WHERE user_id = $1",
+//     [user_id]
+//   );
+
+//   await pool.query("UPDATE cart SET product_id = $2 WHERE cart_id = $1", [
+//     cartId.rows[0].cart_id,
+//     product_id,
+//   ]);
+//   res.status(200).send(`success`);
+// };
+
 const updateCart = async (req, res) => {
-  const user_id = parseInt(req.params.id);
+  // const user_id = parseInt(req.params.id);
   console.log(typeof user_id);
-  let { product_id } = req.body;
-  parseInt(product_id);
+  let { product_id, user_id } = req.body;
+  parseInt(product_id, user_id);
 
   const cartId = await pool.query(
     "SELECT cart_id FROM cart WHERE user_id = $1",

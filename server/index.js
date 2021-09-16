@@ -23,7 +23,7 @@ app.get("/api/category", queries.getCategory);
 // app.delete("/api/category/:id");
 
 // app.get("/api/cart", queries.getCart);
-// app.post("/api/cart", queries.addCart);
+// app.post("/api/cart/:id", queries.addCart);
 app.post("/api/cart/:id", queries.getCart);
 app.put("/api/cart/:id", queries.updateCart);
 // app.delete("/api/cart/:id", queries.deleteCart);
