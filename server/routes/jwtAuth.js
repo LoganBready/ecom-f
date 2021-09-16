@@ -19,9 +19,6 @@ router.post("/register", validInfo, async (req, res) => {
       return res.status(401).json("Email already registered.");
     }
 
-    // if (password.body.length < 5) {
-    //   return alert("Password must be at least 5 characters!");
-    // }
     const saltRound = 10;
     const salt = await bcrypt.genSalt(saltRound);
 
@@ -33,6 +30,7 @@ router.post("/register", validInfo, async (req, res) => {
     );
 
     const token = jwtGenerator(newUser.rows[0].user_id);
+
     const userId = newUser.rows[0].user_id;
 
     res.json({ token, userId });
@@ -73,8 +71,9 @@ router.post("/login", validInfo, async (req, res) => {
       return res.status(401).json("Password or Email is incorrect.");
     }
 
+    const userId = user.rows[0].user_id;
     const token = jwtGenerator(user.rows[0].user_id);
-    const userId = newUser.rows[0].user_id;
+
     res.json({ token, userId });
   } catch (err) {
     console.error(err.message);

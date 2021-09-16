@@ -89,9 +89,9 @@ const getCart = async (req, res) => {
 
 const updateCart = async (req, res) => {
   // const user_id = parseInt(req.params.id);
-  console.log(typeof user_id);
-  let { product_id, user_id } = req.body;
-  parseInt(product_id, user_id);
+
+  const { product_id, user_id } = req.body;
+  // parseInt(product_id, user_id);
 
   const cartId = await pool.query(
     "SELECT cart_id FROM cart WHERE user_id = $1",
