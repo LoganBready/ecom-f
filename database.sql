@@ -86,3 +86,15 @@ SELECT u.user_id, u.user_name, u.user_email, c.cart_id, c.product_id, c.quantity
 from users u 
 join cart c on c.user_id = u.user_id
 where u.user_id = 24;
+
+CREATE TABLE users(
+    user_id SERIAL PRIMARY KEY,
+    user_name varchar(255) NOT NULL,
+    user_email varchar(255) UNIQUE NOT NULL,
+    user_password varchar(255) NOT NULL
+);
+
+CREATE TABLE cart(
+    cart_id SERIAL PRIMARY KEY,
+    user_id SERIAL,
+)

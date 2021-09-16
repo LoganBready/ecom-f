@@ -7,6 +7,7 @@ export default function Header({ setAuth }) {
     <Navbar collapseOnSelect expand="lg" bg="light" sticky="top" className="">
       <Container>
         <Navbar.Brand href="/">The Fishing Store</Navbar.Brand>
+
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse>
           <Nav>
@@ -101,6 +102,7 @@ export default function Header({ setAuth }) {
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
+
           <Nav>
             <Nav.Link>
               <Link to="/cart">Cart</Link>

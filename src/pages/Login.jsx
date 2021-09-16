@@ -42,7 +42,7 @@ const Login = ({ setAuth }) => {
     <>
       <Header />
       <h1 className="mt-5 text-center">Log In</h1>
-      <Form onSubmit={onSubmitForm}>
+      <Form onSubmit={onSubmitForm} className=" w-50 p-3 ">
         <Form.Group size="lg" controlId="email">
           <Form.Label>Email</Form.Label>
           <Form.Control

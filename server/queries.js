@@ -55,21 +55,30 @@ const getCart = async (req, res) => {
   res.json(cart);
 };
 
-const addCart = async (req, res) => {
-  const { user_id, product_id, quantity } = req.body;
-  const addP = await pool.query(
-    "INSERT INTO cart (user_id, product_id, quantity) VALUES ($1, $2, $3)",
-    [user_id, product_id, quantity]
-  );
-  res.status(200).send(`Product added into cart.`);
-};
+// const addCart = async (req, res) => {
+//   const { user_id, product_id, quantity } = req.body;
+//   const addP = await pool.query(
+//     "INSERT INTO cart (user_id, product_id, quantity) VALUES ($1, $2, $3)",
+//     [user_id, product_id, quantity]
+//   );
+//   res.status(200).send(`Product added into cart.`);
+// };
 
 const updateCart = async (req, res) => {
-  const { cart_id, user_id, product_id, quantity } = req.body;
-  const updateC = await pool.query(
-    "UPDATE cart SET (cart_id, user_id, product_id, quantity) = ($1, $2, $3, $4) WHERE cart_id = $1",
-    [cart_id, user_id, product_id, quantity]
+  const user_id = parseInt(req.params.id);
+  console.log(typeof user_id);
+  let { product_id } = req.body;
+  parseInt(product_id);
+
+  const cartId = await pool.query(
+    "SELECT cart_id FROM cart WHERE user_id = $1",
+    [user_id]
   );
+
+  await pool.query("UPDATE cart SET product_id = $2 WHERE cart_id = $1", [
+    cartId.rows[0].cart_id,
+    product_id,
+  ]);
   res.status(200).send(`success`);
 };
 
@@ -89,6 +98,5 @@ module.exports = {
   deleteProduct,
   getCategory,
   getCart,
-  addCart,
   updateCart,
 };
