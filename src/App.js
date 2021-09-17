@@ -87,7 +87,7 @@ function App() {
                 )
               }
             />
-            <Route
+            {/* <Route
               path="/cart"
               render={(props) =>
                 isAuthenticated ? (
@@ -96,7 +96,8 @@ function App() {
                   <Redirect to="/login" />
                 )
               }
-            />
+            /> */}
+            <Route path="/cart" component={Cart} />
             <Route path="/category" component={CategoriesGrid} />
             <Route path="/lures" component={LuresGrid} />
             <Route path="/rods" component={RodsGrid} />

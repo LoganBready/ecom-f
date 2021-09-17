@@ -18,13 +18,10 @@ app.put("/api/products/:id", queries.updateProduct);
 app.delete("/api/products/:id", queries.deleteProduct);
 
 app.get("/api/category", queries.getCategory);
-// app.post("/api/category", queries.addCategory);
-// app.put("/api/category/:id");
-// app.delete("/api/category/:id");
 
 // app.get("/api/cart", queries.getCart);
 // app.post("/api/cart/:id", queries.addCart);
-app.post("/api/cart/:id", queries.getCart);
+app.get("/api/cart/:id", queries.getCart);
 app.put("/api/cart/:id", queries.updateCart);
 // app.delete("/api/cart/:id", queries.deleteCart);
 

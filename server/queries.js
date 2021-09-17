@@ -45,12 +45,13 @@ const getCategory = async (req, res) => {
 };
 
 const getCart = async (req, res) => {
-  const { user_id, user_name, user_email, cart_id } = req.body;
+  const { user_id } = req.params;
+
   const { id } = req.params;
 
   const cart = await pool.query(
-    "SELECT u.user_id, u.user_name, u.user_email, c.cart_id, c.product_id, c.quantity FROM users u JOIN cart c on c.user_id = u.user_id WHERE u.user_id = $1",
-    [id]
+    "SELECT c.product_id, p.product_name, p.product_description, p.product_name, p.product_price, p.product_id FROM cart c JOIN product p ON c.product_id = p.product_id WHERE user_id = $1;",
+    [user_id]
   );
   res.json(cart);
 };
@@ -70,34 +71,37 @@ const getCart = async (req, res) => {
 // };
 
 // const updateCart = async (req, res) => {
-//   const user_id = parseInt(req.params.id);
+//   // const user_id = parseInt(req.params.id);
+//   // const user_id = req.params.id;
+//   const user_id = 38;
 //   console.log(typeof user_id);
+//   console.log(req.params.id);
 //   let { product_id } = req.body;
 //   parseInt(product_id);
 
-//   const cartId = await pool.query(
-//     "SELECT cart_id FROM cart WHERE user_id = $1",
-//     [user_id]
-//   );
+//   const cartId = () => {
+//     pool.query("SELECT cart_id FROM cart WHERE user_id = $1", [user_id]);
+//     pool.query("UPDATE cart SET product_id = $2 WHERE cart_id = $1", [
+//       cartId.rows[0].cart_id,
+//       product_id,
+//     ]);
+//   };
 
-//   await pool.query("UPDATE cart SET product_id = $2 WHERE cart_id = $1", [
-//     cartId.rows[0].cart_id,
-//     product_id,
-//   ]);
 //   res.status(200).send(`success`);
 // };
 
 const updateCart = async (req, res) => {
   // const user_id = parseInt(req.params.id);
-  console.log(typeof user_id);
+
   let { product_id, user_id } = req.body;
   parseInt(product_id, user_id);
+  console.log(user_id);
 
   const cartId = await pool.query(
     "SELECT cart_id FROM cart WHERE user_id = $1",
     [user_id]
   );
-
+  console.log(cartId);
   await pool.query("UPDATE cart SET product_id = $2 WHERE cart_id = $1", [
     cartId.rows[0].cart_id,
     product_id,

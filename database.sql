@@ -98,3 +98,8 @@ CREATE TABLE cart(
     cart_id SERIAL PRIMARY KEY,
     user_id SERIAL,
 )
+SELECT c.product_id, p.product_name, p.product_description, p.product_name, p.product_price, p.product_id
+FROM cart c
+JOIN product p
+ON c.product_id = p.product_id
+WHERE user_id = 38;

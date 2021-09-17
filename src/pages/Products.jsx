@@ -24,8 +24,12 @@ export default function Products() {
 
   function addToCart() {
     const userId = localStorage.getItem("userId");
+
     const addToCart = axios
-      .put("http://localhost:5000/api/cart/:id", productId)
+      .put("http://localhost:5000/api/cart/:id", {
+        product_id: productId,
+        user_id: userId,
+      })
       .then((res) => {
         return console.log("success");
       });
@@ -47,7 +51,9 @@ export default function Products() {
               {description}
             </Card.Text>
             <Card.Text style={{ fontSize: "22px" }}>{"$" + price}</Card.Text>
-            <Button className="my-4 w-100">Add to Cart</Button>
+            <Button className="my-4 w-100" onClick={addToCart}>
+              Add to Cart
+            </Button>
           </Card.Body>
         </Card>
         <Card>
