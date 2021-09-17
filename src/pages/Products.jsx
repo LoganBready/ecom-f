@@ -26,7 +26,7 @@ export default function Products() {
     const userId = localStorage.getItem("userId");
 
     const addToCart = axios
-      .put("http://localhost:5000/api/cart/:id", {
+      .put(`http://localhost:5000/api/cart/${userId}`, {
         product_id: productId,
         user_id: userId,
       })

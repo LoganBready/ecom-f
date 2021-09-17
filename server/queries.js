@@ -45,13 +45,17 @@ const getCategory = async (req, res) => {
 };
 
 const getCart = async (req, res) => {
-  const { user_id } = req.params;
-
+  // const { user_id } = req.params.id;
   const { id } = req.params;
+  // const user_id = parseInt(req.params.id);
+  // const user_id = req.params.id;
+  // console.log(user_id, typeof user_id, "here");
+
+  // const { id } = req.params;
 
   const cart = await pool.query(
     "SELECT c.product_id, p.product_name, p.product_description, p.product_name, p.product_price, p.product_id FROM cart c JOIN product p ON c.product_id = p.product_id WHERE user_id = $1;",
-    [user_id]
+    [id]
   );
   res.json(cart);
 };
@@ -93,15 +97,17 @@ const getCart = async (req, res) => {
 const updateCart = async (req, res) => {
   // const user_id = parseInt(req.params.id);
 
-  let { product_id, user_id } = req.body;
+  let { product_id } = req.body;
+  const user_id = parseInt(req.params.id);
+  // console.log(user_id);
+
   parseInt(product_id, user_id);
-  console.log(user_id);
 
   const cartId = await pool.query(
     "SELECT cart_id FROM cart WHERE user_id = $1",
     [user_id]
   );
-  console.log(cartId);
+
   await pool.query("UPDATE cart SET product_id = $2 WHERE cart_id = $1", [
     cartId.rows[0].cart_id,
     product_id,
