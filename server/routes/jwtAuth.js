@@ -32,6 +32,16 @@ router.post("/register", validInfo, async (req, res) => {
       [name, email, bcryptPassword]
     );
 
+    const userIdQuery = await pool.query(
+      "SELECT user_id from users WHERE user_email = $1",
+      [email]
+    );
+
+    await pool.query("INSERT INTO cart (user_id, product_id) VALUES ($1, $2)", [
+      userIdQuery.rows[0].user_id,
+      null,
+    ]);
+
     const token = jwtGenerator(newUser.rows[0].user_id);
     const userId = newUser.rows[0].user_id;
 
@@ -50,11 +60,6 @@ router.post("/login", validInfo, async (req, res) => {
       "SELECT user_id from users WHERE user_email = $1",
       [email]
     );
-
-    await pool.query("INSERT INTO cart (user_id, product_id) VALUES ($1, $2)", [
-      userIdQuery.rows[0].user_id,
-      null,
-    ]);
 
     const user = await pool.query("SELECT * FROM users WHERE user_email = $1", [
       email,

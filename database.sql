@@ -1,3 +1,16 @@
+CREATE TABLE users(
+    user_id serial PRIMARY KEY NOT NULL, 
+    user_name varchar(255) NOT NULL,
+    user_email varchar(255) NOT NULL,
+    user_password varchar(255) NOT NULL
+);
+
+CREATE TABLE cart (
+    cart_id 
+)
+
+
+
 // LURES
 INSERT INTO product (category_id, product_name, product_price, product_description) 
 VALUES (1, 'Pink Lady', 5.50, 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.');
@@ -103,3 +116,12 @@ FROM cart c
 JOIN product p
 ON c.product_id = p.product_id
 WHERE user_id = 38;
+
+
+-- DELETE FROM cart WHERE product_id = $1
+-- AND user_id = $2
+
+
+INSERT INTO cart (product_id, cart_id) VALUES (17, 104);
+
+INSERT INTO cart (product_id) SELECT cart_id FROM cart WHERE user_id = 42;

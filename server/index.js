@@ -15,7 +15,7 @@ app.use("/dashboard", require("./routes/dashboard"));
 app.get("/api/products", queries.getProducts);
 app.post("/api/products", queries.addProduct);
 app.put("/api/products/:id", queries.updateProduct);
-app.delete("/api/products/:id", queries.deleteProduct);
+// app.delete("/api/products/:id", queries.deleteProduct);
 
 app.get("/api/category", queries.getCategory);
 
@@ -23,7 +23,7 @@ app.get("/api/category", queries.getCategory);
 // app.post("/api/cart/:id", queries.addCart);
 app.get("/api/cart/:id", queries.getCart);
 app.put("/api/cart/:id", queries.updateCart);
-// app.delete("/api/cart/:id", queries.deleteCart);
+app.delete("/api/cart/:id/:productid", queries.deleteCartProduct);
 
 app.listen(5000, () => {
   console.log("Running 5000.");

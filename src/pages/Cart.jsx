@@ -4,6 +4,7 @@ import axios from "axios";
 
 export default function Cart() {
   const [entire, setEntire] = useState([]);
+  const [empty, setEmpty] = useState("");
   const userId = localStorage.getItem("userId");
 
   // const sendThis = { user_id: userId };
@@ -13,10 +14,16 @@ export default function Cart() {
     const newData = axios
       .get(`http://localhost:5000/api/cart/${userId}`)
       .then((res) => {
-        const nam = res.data.rows[0].product_name;
+        console.log(res.data);
+        // const nam = res.data.rows[0].product_name;
 
-        for (let i = 0; i < res.data.rows.length; i++) {
-          dataArr.push(res.data.rows[i]);
+        if (res.data.rows == []) {
+          return res.json("Your cart is empty!");
+          console.log(empty);
+        } else {
+          for (let i = 0; i < res.data.rows.length; i++) {
+            dataArr.push(res.data.rows[i]);
+          }
         }
       })
       .finally(() => {
@@ -28,6 +35,22 @@ export default function Cart() {
 
   function Delete(product_id) {
     console.log(product_id);
+    const userId = localStorage.getItem("userId");
+
+    const sendThis = { product_id: product_id };
+
+    axios
+      .delete(
+        `http://localhost:5000/api/cart/${userId}/${product_id}`,
+        sendThis
+      )
+      .then((res) => {
+        console.log(res);
+        return console.log("success");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   return (
