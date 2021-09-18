@@ -125,3 +125,10 @@ WHERE user_id = 38;
 INSERT INTO cart (product_id, cart_id) VALUES (17, 104);
 
 INSERT INTO cart (product_id) SELECT cart_id FROM cart WHERE user_id = 42;
+
+SELECT c.user_id, c.product_id, p.product_price
+from cart c
+join product p on c.product_id = p.product_id
+WHERE c.user_id = 40;
+
+SELECT sum(product_price) FROM (SELECT c.user_id, c.product_id, p.product_price FROM cart c JOIN product p on c.product_id = p.product_id WHERE c.user_id = 40) as Price;

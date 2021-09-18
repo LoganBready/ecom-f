@@ -4,6 +4,7 @@ import axios from "axios";
 import { Button, Card, CardGroup } from "react-bootstrap";
 import GetBootImage from "../components/GetBootImage";
 import Header from "../components/Header";
+import { toast } from "react-toastify";
 
 export default function Products() {
   const [item, setItem] = useState("");
@@ -31,7 +32,7 @@ export default function Products() {
         user_id: userId,
       })
       .then((res) => {
-        return console.log("success");
+        toast.success("Product Added Into Cart!");
       });
   }
 

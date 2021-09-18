@@ -29,7 +29,7 @@ const Login = ({ setAuth }) => {
       if (parseRes.token) {
         localStorage.setItem("token", parseRes.token);
         localStorage.setItem("userId", parseRes.userId);
-        console.log(typeof localStorage.setItem("userId", parseRes.userId));
+
         setAuth(true);
         toast.success("Logged In Successfully!");
       } else {

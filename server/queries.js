@@ -87,6 +87,15 @@ const updateCart = async (req, res) => {
   res.status(200).send(`success`);
 };
 
+const getPrice = async (req, res) => {
+  const { id } = req.params;
+  const first = await pool.query(
+    "SELECT SUM(product_price) FROM (SELECT c.user_id, c.product_id, p.product_price FROM cart c JOIN product p on c.product_id = p.product_id WHERE c.user_id = $1) AS Price",
+    [id]
+  );
+  res.json(first);
+};
+
 module.exports = {
   getProducts,
   addProduct,
@@ -95,4 +104,5 @@ module.exports = {
   getCart,
   updateCart,
   deleteCartProduct,
+  getPrice,
 };

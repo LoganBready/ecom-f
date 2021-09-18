@@ -4,6 +4,7 @@ const cors = require("cors");
 const pool = require("./db");
 const router = express.Router();
 const queries = require("./queries");
+require("dotenv").config();
 
 app.use(express.json());
 app.use(cors());
@@ -24,6 +25,8 @@ app.get("/api/category", queries.getCategory);
 app.get("/api/cart/:id", queries.getCart);
 app.put("/api/cart/:id", queries.updateCart);
 app.delete("/api/cart/:id/:productid", queries.deleteCartProduct);
+
+app.get("/api/user/price/:id", queries.getPrice);
 
 app.listen(5000, () => {
   console.log("Running 5000.");

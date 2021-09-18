@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import axios from "axios";
+import StripeCheckout from "react-stripe-checkout";
+import { toast } from "react-toastify";
 
 export default function Cart() {
   const [entire, setEntire] = useState([]);
   const [empty, setEmpty] = useState("");
+  const [price, setPrice] = useState("");
   const userId = localStorage.getItem("userId");
 
   // const sendThis = { user_id: userId };
@@ -14,7 +17,7 @@ export default function Cart() {
     const newData = axios
       .get(`http://localhost:5000/api/cart/${userId}`)
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         // const nam = res.data.rows[0].product_name;
 
         if (res.data.rows == []) {
@@ -31,10 +34,19 @@ export default function Cart() {
 
         setTimeout(() => {}, 1700);
       });
+    function returnAmount() {
+      const userId = localStorage.getItem("userId");
+      axios
+        .get(`http://localhost:5000/api/user/price/${userId}`)
+        .then((res) => {
+          setPrice(res.data.rows[0].sum);
+        });
+    }
+    returnAmount();
   }, []);
 
   function Delete(product_id) {
-    console.log(product_id);
+    // console.log(product_id);
     const userId = localStorage.getItem("userId");
 
     const sendThis = { product_id: product_id };
@@ -45,7 +57,8 @@ export default function Cart() {
         sendThis
       )
       .then((res) => {
-        console.log(res);
+        // console.log(res);
+        toast.success("Product Deleted From Cart!");
         return console.log("success");
       })
       .catch((err) => {
@@ -53,9 +66,14 @@ export default function Cart() {
       });
   }
 
+  function handleToken(token, addresses) {
+    // console.log({ token, addresses });
+  }
+
   return (
     <div>
       <Header />
+
       <div>
         {entire.map((product, index) => (
           <div key={entire[index].product_id}>
@@ -74,6 +92,17 @@ export default function Cart() {
           </div>
         ))}
       </div>
+      <div>
+        <span>Total: ${price}</span>
+      </div>
+      <StripeCheckout
+        stripeKey="pk_test_51Jb6SBEORtkApjhM5akn3b9YXklSJJjE3LLvxGZu5PRrPiwaQHdA7FpXihlnhc9hP1TUlMMsG8gPuKORxwCvPZqd00rw0aKV9f"
+        token={handleToken}
+        billingAddress
+        shippingAddress
+        amount={price * 100}
+        // name={entire[index].product_name}
+      />
     </div>
   );
 }
