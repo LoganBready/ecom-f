@@ -75,15 +75,6 @@ const updateCart = async (req, res) => {
     product_id,
   ]);
 
-  // const cartId = await pool.query(
-  //   "SELECT cart_id FROM cart WHERE user_id = $1",
-  //   [user_id]
-  // );
-
-  // await pool.query("UPDATE cart SET product_id = $2 WHERE cart_id = $1", [
-  //   cartId.rows[0].cart_id,
-  //   product_id,
-  // ]);
   res.status(200).send(`success`);
 };
 

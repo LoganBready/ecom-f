@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import { Button, Card, CardGroup } from "react-bootstrap";
 import GetBootImage from "../components/GetBootImage";
@@ -57,10 +57,11 @@ export default function Products() {
             </Button>
           </Card.Body>
         </Card>
-        <Card>
+        <Card className="">
           <GetBootImage id={id} className="align-middle " />
         </Card>
       </CardGroup>
+      <Link to="/">Back</Link>
     </div>
   );
 }
