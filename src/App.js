@@ -64,7 +64,7 @@ function App() {
                 !isAuthenticated ? (
                   <Login {...props} setAuth={setAuth} />
                 ) : (
-                  <Redirect to="/" />
+                  <Redirect to="/logout" />
                 )
               }
             />
@@ -84,20 +84,11 @@ function App() {
                 isAuthenticated ? (
                   <Logout {...props} setAuth={setAuth} />
                 ) : (
-                  <Redirect to="/" />
-                )
-              }
-            />
-            {/* <Route
-              path="/cart"
-              render={(props) =>
-                isAuthenticated ? (
-                  <Cart {...props} setAuth={setAuth} />
-                ) : (
                   <Redirect to="/login" />
                 )
               }
-            /> */}
+            />
+
             <Route path="/cart" component={Cart} />
             <Route path="/category" component={CategoriesGrid} />
             <Route path="/lures" component={LuresGrid} />

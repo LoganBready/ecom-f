@@ -17,10 +17,6 @@ export default function carousel() {
               borderRadius: "5px",
             }}
           />
-          <Carousel.Caption>
-            <h3>Rods</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item interval={3500}>
           <img
@@ -29,10 +25,6 @@ export default function carousel() {
             alt="Second slide"
             style={{ borderRadius: "5px" }}
           />
-          <Carousel.Caption>
-            <h3>Lures</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <img
@@ -41,12 +33,6 @@ export default function carousel() {
             alt="Third slide"
             style={{ borderRadius: "5px" }}
           />
-          <Carousel.Caption>
-            <h3>Tackle</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>

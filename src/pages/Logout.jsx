@@ -22,6 +22,7 @@ const Logout = ({ setAuth }) => {
   const logout = (e) => {
     e.preventDefault();
     localStorage.removeItem("token");
+    localStorage.removeItem("userId");
     setAuth(false);
     toast.success("Logged Out Successfully!");
   };

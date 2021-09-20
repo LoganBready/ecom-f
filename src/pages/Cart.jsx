@@ -87,6 +87,18 @@ export default function Cart() {
     }
   }
 
+  // if (localStorage.getItem("userId") == null) {
+  //   return (
+  //     <>
+  //       <Header />
+  //       <h3 className="my-5 text-center">
+  //         To View Your Cart, <Link to="/login">Log In!</Link>
+  //       </h3>
+  //     </>
+  //   );
+  //   return console.log("ye");
+  // }
+
   if (price == null || 0) {
     return (
       <div>
