@@ -1,16 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Navbar, Container, Nav, NavDropdown, Button } from "react-bootstrap";
+import { BiUserCircle } from "react-icons/bi";
+import { HiOutlineShoppingCart } from "react-icons/hi";
 
 export default function Header({ setAuth }) {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="light" sticky="top" className="">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      sticky="top"
+      className=""
+      variant="dark"
+    >
       <Container>
         <Navbar.Brand href="/">The Fishing Store</Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse>
-          <Nav>
+          <Nav className="me-auto">
             <NavDropdown title="Lures">
               <NavDropdown.Item href="/products/0">
                 Blue Deep Diver
@@ -104,13 +113,14 @@ export default function Header({ setAuth }) {
           </Nav>
 
           <Nav>
-            <Nav.Link>
-              <Link to="/cart">Cart</Link>
+            <Nav.Link href="/cart">
+              <HiOutlineShoppingCart style={{ fontSize: "25px" }} />
             </Nav.Link>
-
-            <Button variant="light" href="/login">
-              Sign In
-            </Button>
+            <NavDropdown title={<BiUserCircle style={{ fontSize: "25px" }} />}>
+              <NavDropdown.Item href="/login">Login</NavDropdown.Item>
+              <NavDropdown.Item href="/logout">Log Out</NavDropdown.Item>
+              <NavDropdown.Item href="/register">Register</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
         </Navbar.Collapse>
       </Container>

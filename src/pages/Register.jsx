@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import Header from "../components/Header";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Card } from "react-bootstrap";
 import axios from "axios";
 
 const Register = ({ setAuth }) => {
@@ -47,43 +47,76 @@ const Register = ({ setAuth }) => {
   return (
     <>
       <Header />
-      <h1 className="mt-5 text-center">Register</h1>
-      <Form onSubmit={onSubmitForm}>
-        <Form.Group size="lg" controlId="email">
-          <Form.Label>Email</Form.Label>
-          <Form.Control
-            autoFocus
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => onChange(e)}
-            className="form-control my-3"
-          />
-        </Form.Group>
-        <Form.Group size="lg" controlId="password">
-          <Form.Label>Password</Form.Label>
-          <Form.Control
-            type="password"
-            name="password"
-            value={password}
-            onChange={(e) => onChange(e)}
-            className="form-control my-3"
-          />
-        </Form.Group>
-        <Form.Group size="lg" controlId="name">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            name="name"
-            value={name}
-            onChange={(e) => onChange(e)}
-            className="form-control my-3"
-          />
-        </Form.Group>
-        <Button block size="lg" type="submit" className="btn  btn-block">
-          Login
-        </Button>
-      </Form>
+      <Card
+        style={{
+          alignItems: "center",
+          justifyContent: "center",
+          width: "480px",
+          height: "650px",
+          maxWidth: "900px",
+          padding: "15px",
+          margin: "auto",
+          top: "50%",
+          marginTop: "100px",
+        }}
+      >
+        <Card.Body>
+          <Card.Title>
+            <h1 className="mt-5 text-center">Register</h1>
+          </Card.Title>
+          <Form
+            onSubmit={onSubmitForm}
+            className="my-3"
+            style={{ width: "460px" }}
+          >
+            <Form.Group size="lg" controlId="email">
+              <Form.Label>
+                <h4>Email</h4>
+              </Form.Label>
+              <Form.Control
+                autoFocus
+                name="email"
+                type="email"
+                value={email}
+                onChange={(e) => onChange(e)}
+                className="form-control my-3"
+              />
+            </Form.Group>
+            <Form.Group size="lg" controlId="password">
+              <Form.Label>
+                <h4>Password</h4>
+              </Form.Label>
+              <Form.Control
+                type="password"
+                name="password"
+                value={password}
+                onChange={(e) => onChange(e)}
+                className="form-control my-3"
+              />
+            </Form.Group>
+            <Form.Group size="lg" controlId="name">
+              <Form.Label>
+                <h4>Name</h4>
+              </Form.Label>
+              <Form.Control
+                type="text"
+                name="name"
+                value={name}
+                onChange={(e) => onChange(e)}
+                className="form-control my-3"
+              />
+            </Form.Group>
+            <Button
+              block
+              size="lg"
+              type="submit"
+              className="btn  btn-block w-100"
+            >
+              Register
+            </Button>
+          </Form>
+        </Card.Body>
+      </Card>
     </>
   );
 };

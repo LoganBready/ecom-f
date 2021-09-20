@@ -10,11 +10,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
+import Logout from "./pages/Logout";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Products from "./pages/Products";
-import ThankYou from "./pages/ThankYou";
+
 import CategoriesGrid from "./components/CategoriesGrid";
 import LuresGrid from "./components/LuresGrid";
 import RodsGrid from "./components/RodsGrid";
@@ -64,7 +64,7 @@ function App() {
                 !isAuthenticated ? (
                   <Login {...props} setAuth={setAuth} />
                 ) : (
-                  <Redirect to="/dashboard" />
+                  <Redirect to="/logout" />
                 )
               }
             />
@@ -79,12 +79,12 @@ function App() {
               }
             />
             <Route
-              path="/dashboard"
+              path="/logout"
               render={(props) =>
                 isAuthenticated ? (
-                  <Dashboard {...props} setAuth={setAuth} />
+                  <Logout {...props} setAuth={setAuth} />
                 ) : (
-                  <Redirect to="/login" />
+                  <Redirect to="/" />
                 )
               }
             />
@@ -107,7 +107,6 @@ function App() {
             <Route path="/boots" component={BootsGrid} />
             <Route path="/clothing" component={ClothingGrid} />
             <Route path="/products/:id" component={Products} />
-            <Route path="/thankyou" component={ThankYou} />
           </Switch>
         </div>
       </Router>

@@ -4,6 +4,7 @@ import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
 import { toast } from "react-toastify";
 import { History } from "react-router-dom";
+import { Card, Button } from "react-bootstrap";
 
 export default function Cart() {
   const [entire, setEntire] = useState([]);
@@ -77,35 +78,42 @@ export default function Cart() {
   return (
     <div>
       <Header />
-      <div>
-        {entire.map((product, index) => (
-          <div key={entire[index].product_id}>
-            <p>{entire[index].product_name}</p>
+      <Card className="my-5">
+        <Card.Body>
+          {entire.map((product, index) => (
+            <div key={entire[index].product_id}>
+              <Card.Title>
+                <h2>{entire[index].product_name}</h2>
+              </Card.Title>
+              <Card.Text>
+                <h4>{"$" + entire[index].product_price}</h4>
+              </Card.Text>
+              <Card.Text>
+                <h3>{entire[index].product_description}</h3>
+              </Card.Text>
 
-            <p>{"$" + entire[index].product_price}</p>
-
-            <p>{entire[index].product_description}</p>
-
-            <button
-              data-productid={entire[index].product_id}
-              onClick={(e) => Delete(e.target.dataset.productid)}
-            >
-              delete
-            </button>
-          </div>
-        ))}
-      </div>
-      <div>
-        <span>Total: ${price}</span>
-      </div>
-      <StripeCheckout
-        stripeKey="pk_test_51Jb6SBEORtkApjhM5akn3b9YXklSJJjE3LLvxGZu5PRrPiwaQHdA7FpXihlnhc9hP1TUlMMsG8gPuKORxwCvPZqd00rw0aKV9f"
-        token={handleToken}
-        billingAddress
-        shippingAddress
-        amount={price * 100}
-        successUrl="http://localhost:3000/thankyou"
-      />
+              <Button
+                data-productid={entire[index].product_id}
+                onClick={(e) => Delete(e.target.dataset.productid)}
+              >
+                Delete From Cart
+              </Button>
+            </div>
+          ))}
+        </Card.Body>
+        <h3>Total: ${price}</h3>
+        <StripeCheckout className="my-2" />
+      </Card>
     </div>
   );
+
+  //
+  //     <StripeCheckout
+  //       stripeKey="pk_test_51Jb6SBEORtkApjhM5akn3b9YXklSJJjE3LLvxGZu5PRrPiwaQHdA7FpXihlnhc9hP1TUlMMsG8gPuKORxwCvPZqd00rw0aKV9f"
+  //       token={handleToken}
+  //       billingAddress
+  //       shippingAddress
+  //       amount={price * 100}
+  //       successUrl="http://localhost:3000/thankyou"
+  //     />
 }
