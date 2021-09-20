@@ -26,6 +26,8 @@ app.get("/api/cart/:id", queries.getCart);
 app.put("/api/cart/:id", queries.updateCart);
 app.delete("/api/cart/:id/:productid", queries.deleteCartProduct);
 
+app.delete("api/allcart/:id", queries.deleteAll);
+
 app.get("/api/user/price/:id", queries.getPrice);
 
 app.listen(5000, () => {

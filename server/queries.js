@@ -87,6 +87,13 @@ const getPrice = async (req, res) => {
   res.json(first);
 };
 
+const deleteAll = async (req, res) => {
+  const { id } = req.params;
+  const deleteIt = await pool.query("DELETE FROM cart WHERE user_id = $1", [
+    id,
+  ]);
+};
+
 module.exports = {
   getProducts,
   addProduct,
@@ -96,4 +103,5 @@ module.exports = {
   updateCart,
   deleteCartProduct,
   getPrice,
+  deleteAll,
 };

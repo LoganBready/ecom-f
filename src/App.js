@@ -14,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Products from "./pages/Products";
+import ThankYou from "./pages/ThankYou";
 import CategoriesGrid from "./components/CategoriesGrid";
 import LuresGrid from "./components/LuresGrid";
 import RodsGrid from "./components/RodsGrid";
@@ -106,6 +107,7 @@ function App() {
             <Route path="/boots" component={BootsGrid} />
             <Route path="/clothing" component={ClothingGrid} />
             <Route path="/products/:id" component={Products} />
+            <Route path="/thankyou" component={ThankYou} />
           </Switch>
         </div>
       </Router>

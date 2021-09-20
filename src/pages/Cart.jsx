@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import axios from "axios";
 import StripeCheckout from "react-stripe-checkout";
 import { toast } from "react-toastify";
+import { History } from "react-router-dom";
 
 export default function Cart() {
   const [entire, setEntire] = useState([]);
@@ -103,7 +104,7 @@ export default function Cart() {
         billingAddress
         shippingAddress
         amount={price * 100}
-        // name={entire[index].product_name}
+        successUrl="http://localhost:3000/thankyou"
       />
     </div>
   );
