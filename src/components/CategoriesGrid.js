@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Card, Col, Row, CardGroup } from "react-bootstrap";
+import { Card, CardGroup } from "react-bootstrap";
 import Header from "../components/Header";
 
 import tacklethumb from "../images/thumbnail/tackle-thumbnail.jpg";
@@ -21,7 +21,7 @@ export default function CategoriesGrid() {
   return (
     <div>
       <Header />
-      <h1 className="text-center my-3">Product Categories</h1>
+      <h1 className="text-center my-2">Product Categories</h1>
       <CardGroup className="my-5">
         <Card
           as="a"

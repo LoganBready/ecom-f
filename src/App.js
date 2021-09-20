@@ -64,7 +64,7 @@ function App() {
                 !isAuthenticated ? (
                   <Login {...props} setAuth={setAuth} />
                 ) : (
-                  <Redirect to="/logout" />
+                  <Redirect to="/" />
                 )
               }
             />
