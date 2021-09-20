@@ -13,6 +13,7 @@ export default function Header({ setAuth }) {
       sticky="top"
       className=""
       variant="dark"
+      style={{ fontFamily: "Space Mono" }}
     >
       <Container>
         <Navbar.Brand href="/">The Fishing Store</Navbar.Brand>

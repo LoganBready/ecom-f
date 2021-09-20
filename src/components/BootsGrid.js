@@ -62,65 +62,131 @@ export default function LuresGrid() {
       <Header />
       <h1 className="text-center my-3">Boots</h1>
       <CardGroup>
-        <Card>
+        <Card
+          as="a"
+          href="/products/24"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={jungleBoot} />
           <Card.Body>
             <Card.Title>
-              <Link to="/products/24">{name}</Link>
-              {"$" + price}
+              <Link
+                to="/products/24"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {name}
+              </Link>
             </Card.Title>
+            <Card.Text>
+              <h3>{"$" + price}</h3>
+            </Card.Text>
             <Card.Text>{description}</Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/products/25"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={theBoot} />
           <Card.Body>
             <Card.Title>
-              <Link to="/products/25">{name2}</Link>
-              {"$" + price2}
+              <Link
+                to="/products/25"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {name2}
+              </Link>
             </Card.Title>
+            <Card.Text>
+              <h3>{"$" + price2}</h3>
+            </Card.Text>
             <Card.Text>{description2}</Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/products/26"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={simsFoot} />
           <Card.Body>
             <Card.Title>
-              <Link to="/products/26">{name3}</Link>
-              {"$" + price3}
+              <Link
+                to="/products/26"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {name3}
+              </Link>
             </Card.Title>
+            <Card.Text>
+              <h3>{"$" + price3}</h3>
+            </Card.Text>
             <Card.Text>{description3}</Card.Text>
           </Card.Body>
         </Card>
       </CardGroup>
       <CardGroup>
-        <Card>
+        <Card
+          as="a"
+          href="/products/27"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={reddingtonGrey} />
           <Card.Body>
             <Card.Title>
-              <Link to="/products/27">{name4}</Link>
-              {"$" + price4}
+              <Link
+                to="/products/27"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {name4}
+              </Link>
             </Card.Title>
+            <Card.Text>
+              <h3>{"$" + price4}</h3>
+            </Card.Text>
             <Card.Text>{description4}</Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/products/28"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={booties} />
           <Card.Body>
             <Card.Title>
-              <Link to="/products/28">{name5}</Link>
-              {"$" + price5}
+              <Link
+                to="/products/28"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {name5}
+              </Link>
             </Card.Title>
+            <Card.Text>
+              <h3>{"$" + price5}</h3>
+            </Card.Text>
             <Card.Text>{description5}</Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/products/29"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={wrapthTech} />
           <Card.Body>
             <Card.Title>
-              <Link to="/products/29">{name6}</Link>
-              {"$" + price6}
+              <Link
+                to="/products/29"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                {name6}
+              </Link>
             </Card.Title>
+            <Card.Text>
+              <h3>{"$" + price6}</h3>
+            </Card.Text>
             <Card.Text>{description6}</Card.Text>
           </Card.Body>
         </Card>

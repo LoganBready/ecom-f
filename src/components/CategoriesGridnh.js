@@ -21,11 +21,20 @@ export default function CategoriesGrid() {
     <div>
       <h1 className="text-center">Product Categories</h1>
       <CardGroup className="my-5">
-        <Card>
+        <Card
+          as="a"
+          href="/lures"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={lureThumb} />
           <Card.Body>
             <Card.Title>
-              <Link to="/lures">Lures</Link>
+              <Link
+                to="/lures"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Lures
+              </Link>
             </Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -33,11 +42,20 @@ export default function CategoriesGrid() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/rods"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={rodThumb} />
           <Card.Body>
             <Card.Title>
-              <Link to="/rods">Fishing Rods</Link>
+              <Link
+                to="/rods"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Fishing Rods
+              </Link>
             </Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -45,11 +63,20 @@ export default function CategoriesGrid() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/reels"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={reelThumb} />
           <Card.Body>
             <Card.Title>
-              <Link to="/reels">Reels</Link>
+              <Link
+                to="/reels"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Reels
+              </Link>
             </Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -59,11 +86,20 @@ export default function CategoriesGrid() {
         </Card>
       </CardGroup>
       <CardGroup>
-        <Card>
+        <Card
+          as="a"
+          href="/tackle"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={tacklethumb} />
           <Card.Body>
             <Card.Title>
-              <Link to="/tackle">Tackle</Link>
+              <Link
+                to="/tackle"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Tackle
+              </Link>
             </Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -71,11 +107,20 @@ export default function CategoriesGrid() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/boots"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={bootsthumb} />
           <Card.Body>
             <Card.Title>
-              <Link to="/boots">Boots</Link>
+              <Link
+                to="/boots"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Boots
+              </Link>
             </Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
@@ -83,11 +128,20 @@ export default function CategoriesGrid() {
             </Card.Text>
           </Card.Body>
         </Card>
-        <Card>
+        <Card
+          as="a"
+          href="/clothing"
+          style={{ textDecoration: "none", color: "black" }}
+        >
           <Card.Img variant="top" src={clothingthumb} />
           <Card.Body>
             <Card.Title>
-              <Link to="clothing">Clothing</Link>
+              <Link
+                to="clothing"
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                Clothing
+              </Link>
             </Card.Title>
             <Card.Text>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean

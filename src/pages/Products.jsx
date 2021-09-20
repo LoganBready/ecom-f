@@ -61,7 +61,7 @@ export default function Products() {
           <GetBootImage id={id} className="align-middle " />
         </Card>
       </CardGroup>
-      <Link to="/">Back</Link>
+      <Link to="/category">Back</Link>
     </div>
   );
 }
