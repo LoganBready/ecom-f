@@ -11,7 +11,7 @@ export default function Header({ setAuth }) {
       expand="lg"
       bg="dark"
       sticky="top"
-      className=""
+      className="shadow"
       variant="dark"
       style={{ fontFamily: "Space Mono" }}
     >
