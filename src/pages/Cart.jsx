@@ -5,7 +5,6 @@ import StripeCheckout from "react-stripe-checkout";
 import { toast } from "react-toastify";
 import { Link } from "react-router-dom";
 import { Card, CardGroup, Button } from "react-bootstrap";
-import GetBootImage from "../components/GetBootImage";
 
 export default function Cart() {
   const [entire, setEntire] = useState([]);
@@ -106,7 +105,7 @@ export default function Cart() {
             <Card.Body>
               {entire.map((product, index) => (
                 <div key={entire[index].product_id}>
-                  <Card.Title>
+                  <Card.Title style={{ fontFamily: "Sora" }}>
                     <h2>{entire[index].product_name}</h2>
                   </Card.Title>
 

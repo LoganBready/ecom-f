@@ -1,7 +1,5 @@
-import book from "../images/boots/boots-1.jpg";
-
 import React, { useState } from "react";
-import { Card, Col, Row, CardGroup } from "react-bootstrap";
+
 let imagePath = "../images/boots/boots-1.jpg";
 
 const GetBootImage = ({ id }) => {

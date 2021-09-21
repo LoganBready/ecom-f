@@ -114,6 +114,9 @@ const Register = ({ setAuth }) => {
             >
               Register
             </Button>
+            <h4 className="my-3">
+              Already Have An Accout? <Link to="/login">Login</Link>
+            </h4>
           </Form>
         </Card.Body>
       </Card>

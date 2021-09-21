@@ -61,7 +61,7 @@ export default function LuresGrid() {
     <div>
       <Header />
       <h1 className="text-center my-3">Clothing</h1>
-      <CardGroup>
+      <CardGroup className="mb-5 shadow">
         <Card
           as="a"
           href="/products/30"
@@ -69,7 +69,7 @@ export default function LuresGrid() {
         >
           <Card.Img variant="top" src={bassHoodie} />
           <Card.Body>
-            <Card.Title>
+            <Card.Title style={{ fontFamily: "Sora" }}>
               <Link
                 to="/products/30"
                 style={{ textDecoration: "none", color: "black" }}
@@ -90,7 +90,7 @@ export default function LuresGrid() {
         >
           <Card.Img variant="top" src={halfGloves} />
           <Card.Body>
-            <Card.Title>
+            <Card.Title style={{ fontFamily: "Sora" }}>
               <Link
                 to="/products/31"
                 style={{ textDecoration: "none", color: "black" }}
@@ -111,7 +111,7 @@ export default function LuresGrid() {
         >
           <Card.Img variant="top" src={longSleeveShirt} />
           <Card.Body>
-            <Card.Title>
+            <Card.Title style={{ fontFamily: "Sora" }}>
               <Link
                 to="/products/32"
                 style={{ textDecoration: "none", color: "black" }}
@@ -131,10 +131,11 @@ export default function LuresGrid() {
           as="a"
           href="/products/33"
           style={{ textDecoration: "none", color: "black" }}
+          className="mb-5 shadow"
         >
           <Card.Img variant="top" src={americaFishHat} />
           <Card.Body>
-            <Card.Title>
+            <Card.Title style={{ fontFamily: "Sora" }}>
               <Link
                 to="/products/33"
                 style={{ textDecoration: "none", color: "black" }}
@@ -153,10 +154,11 @@ export default function LuresGrid() {
           as="a"
           href="/products/34"
           style={{ textDecoration: "none", color: "black" }}
+          className="mb-5 shadow"
         >
           <Card.Img variant="top" src={goture} />
           <Card.Body>
-            <Card.Title>
+            <Card.Title style={{ fontFamily: "Sora" }}>
               <Link
                 to="/products/34"
                 style={{ textDecoration: "none", color: "black" }}
@@ -174,10 +176,11 @@ export default function LuresGrid() {
           as="a"
           href="/products/35"
           style={{ textDecoration: "none", color: "black" }}
+          className="mb-5 shadow"
         >
           <Card.Img variant="top" src={sharkShirt} />
           <Card.Body>
-            <Card.Title>
+            <Card.Title style={{ fontFamily: "Sora" }}>
               <Link
                 to="/products/35"
                 style={{ textDecoration: "none", color: "black" }}

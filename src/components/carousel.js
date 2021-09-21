@@ -7,7 +7,7 @@ import carousel3 from "../images/carousel/carousel-3.jpg";
 export default function carousel() {
   return (
     <div className="vh-90">
-      <Carousel variant="dark" className="my-5 myCarousel">
+      <Carousel variant="dark" className="my-5 myCarousel shadow-lg">
         <Carousel.Item interval={3500}>
           <img
             className=" d-block w-100"

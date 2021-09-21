@@ -21,7 +21,7 @@ export default function Header({ setAuth }) {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse>
           <Nav className="me-auto">
-            <NavDropdown title="Lures">
+            <NavDropdown title="Lures" className="">
               <NavDropdown.Item href="/products/0">
                 Blue Deep Diver
               </NavDropdown.Item>

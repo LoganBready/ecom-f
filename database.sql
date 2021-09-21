@@ -132,3 +132,6 @@ join product p on c.product_id = p.product_id
 WHERE c.user_id = 40;
 
 SELECT sum(product_price) FROM (SELECT c.user_id, c.product_id, p.product_price FROM cart c JOIN product p on c.product_id = p.product_id WHERE c.user_id = 40) as Price;
+
+
+UPDATE product SET product_description = "Polycarbonate body with full thru-wire construction.  Max Depth: 28 Feet.  Wide wobble with lots of tail action." WHERE product_id = 1;
