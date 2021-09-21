@@ -40,7 +40,7 @@ export default function Products() {
     <div>
       <Header />
       <CardGroup>
-        <Card>
+        <Card className="my-5">
           <Card.Body>
             <Card.Title
               className="text-center"
@@ -51,13 +51,15 @@ export default function Products() {
             <Card.Text className="my-5" style={{ fontSize: "28px" }}>
               {description}
             </Card.Text>
-            <Card.Text style={{ fontSize: "22px" }}>{"$" + price}</Card.Text>
+            <Card.Text style={{ fontSize: "22px" }}>
+              <h3>{"$" + price}</h3>
+            </Card.Text>
             <Button className="my-4 w-100" onClick={addToCart}>
               Add to Cart
             </Button>
           </Card.Body>
         </Card>
-        <Card className="">
+        <Card className="my-5">
           <GetBootImage id={id} className="align-middle " />
         </Card>
       </CardGroup>

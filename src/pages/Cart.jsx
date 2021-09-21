@@ -87,19 +87,7 @@ export default function Cart() {
     }
   }
 
-  // if (localStorage.getItem("userId") == null) {
-  //   return (
-  //     <>
-  //       <Header />
-  //       <h3 className="my-5 text-center">
-  //         To View Your Cart, <Link to="/login">Log In!</Link>
-  //       </h3>
-  //     </>
-  //   );
-  //   return console.log("ye");
-  // }
-
-  if (price == null || 0) {
+  if (price < 1) {
     return (
       <div>
         <Header />
@@ -147,7 +135,6 @@ export default function Cart() {
               billingAddress
               shippingAddress
               amount={price * 100}
-              successUrl="http://localhost:3000/thankyou"
             />
           </Card>
         </CardGroup>
