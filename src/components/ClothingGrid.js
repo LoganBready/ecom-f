@@ -63,7 +63,7 @@ export default function LuresGrid() {
       <h1 className="text-center my-3">Clothing</h1>
       <CardGroup className="mb-5 shadow">
         <Card
-          as="a"
+          as=""
           href="/products/30"
           style={{ textDecoration: "none", color: "black" }}
         >
@@ -84,7 +84,7 @@ export default function LuresGrid() {
           </Card.Body>
         </Card>
         <Card
-          as="a"
+          as=""
           href="/products/31"
           style={{ textDecoration: "none", color: "black" }}
         >
@@ -105,7 +105,7 @@ export default function LuresGrid() {
           </Card.Body>
         </Card>
         <Card
-          as="a"
+          as=""
           href="/products/32"
           style={{ textDecoration: "none", color: "black" }}
         >
@@ -128,7 +128,7 @@ export default function LuresGrid() {
       </CardGroup>
       <CardGroup>
         <Card
-          as="a"
+          as=""
           href="/products/33"
           style={{ textDecoration: "none", color: "black" }}
           className="mb-5 shadow"
@@ -151,7 +151,7 @@ export default function LuresGrid() {
           </Card.Body>
         </Card>
         <Card
-          as="a"
+          as=""
           href="/products/34"
           style={{ textDecoration: "none", color: "black" }}
           className="mb-5 shadow"
@@ -173,7 +173,7 @@ export default function LuresGrid() {
           </Card.Body>
         </Card>
         <Card
-          as="a"
+          as=""
           href="/products/35"
           style={{ textDecoration: "none", color: "black" }}
           className="mb-5 shadow"
