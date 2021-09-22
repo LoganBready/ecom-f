@@ -7,4 +7,5 @@
 </ul>
 <h3>Project Demo</h3>
 <hr/>
-![demo](https://user-images.githubusercontent.com/41706161/134387240-c90e7066-8ef8-40af-8984-46bc01252082.gif)
+
+![demo](https://user-images.githubusercontent.com/41706161/134387483-e93af112-d17d-4995-ba82-db1262014790.gif)
