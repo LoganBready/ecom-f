@@ -7,4 +7,4 @@
 </ul>
 <h3>Project Demo</h3>
 <hr/>
-![Project Demo](demo.gif)
+
