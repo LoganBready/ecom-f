@@ -1,3 +1,6 @@
+<h1>Live project walkthrough!</h1>
+<p>https://vimeo.com/manage/videos/611770739</p>
+
 <h3>Features</h3>
 <hr/>
 <h4>Built with PostgreSQL, Express, React, and Node.  Styled with React-Bootstrap. </h4>
